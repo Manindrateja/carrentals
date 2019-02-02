@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" novalidate>
+	<mat-form-field>
+		<input type="text" placeholder="Choose Location" aria-label="Location" matInput [formControl]="locationControl" [matAutocomplete]="auto" name="location">
+		<mat-autocomplete #auto="matAutocomplete">
+		  <mat-option *ngFor="let option of filteredOptions" [value]="option">
+		    {{option}}
+		  </mat-option>
+		</mat-autocomplete>
+	</mat-form-field>
+	<mat-form-field class="example-full-width">
+	  <input matInput [min]="minDate" [matDatepicker]="picker" placeholder="Choose a date" [formControl]="dateControl"  (focus)="picker.open()" required>
+	  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+	  <mat-datepicker #picker></mat-datepicker>
+	</mat-form-field>
+	<button type="submit" [disabled]="dateControl.invalid" mat-raised-button color="primary">Search</button>
+</form>

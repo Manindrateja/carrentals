@@ -1,0 +1,41 @@
+<div class="label">
+	<small>Filters</small>
+	<mat-icon>filter_list</mat-icon>
+</div>
+<mat-form-field [floatLabel]="'never'">
+  <mat-select placeholder="Transmission Type" multiple (selectionChange)="selectionChange($event)" [(ngModel)]="filter.Transmission">
+    <mat-option [value]="'Automatic'">
+      Automatic
+    </mat-option>
+    <mat-option [value]="'Manual'">
+      Manual
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field [floatLabel]="'never'">
+  <mat-select placeholder="Car Type" multiple (selectionChange)="selectionChange($event)" [(ngModel)]="filter.Car_Type">
+    <mat-option [value]="'Hatchback'">
+      Hatchback
+    </mat-option>
+    <mat-option [value]="'Sedan'">
+      Sedan
+    </mat-option>
+    <mat-option [value]="'SUV'">
+      SUV
+    </mat-option>
+    <mat-option [value]="'Mini SUV'">
+      Mini SUV
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field [floatLabel]="'never'">
+  <mat-select placeholder="Fuel Type" multiple (selectionChange)="selectionChange($event)" [(ngModel)]="filter.Fuel_Type">
+    <mat-option [value]="'Petrol'">
+      Petrol
+    </mat-option>
+    <mat-option [value]="'Diesel'">
+      Diesel
+    </mat-option>
+  </mat-select>
+</mat-form-field>

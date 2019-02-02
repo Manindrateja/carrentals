@@ -1,0 +1,29 @@
+:host{
+	position: relative;
+	min-height: 100vh;
+	display: block;
+	background: #333;
+}
+
+.mat-toolbar {
+	text-align: center;
+}
+
+.container {
+	max-width: 1080px;
+	margin: auto;
+	background: #333;
+	padding: 20px;
+	.sortBy {
+		text-align: right;
+	}
+	.empty {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 120px;
+	}
+	.cars {
+
+	}
+}

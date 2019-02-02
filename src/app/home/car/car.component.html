@@ -1,0 +1,22 @@
+<div class="car" [class.selected]="selected">
+	<div class="img">
+		<img [src]="car?.Photo" />
+		<div class="tag price">
+			Price: {{car?.Price}}
+		</div>
+		<div class="tag fuel">{{car?.Fuel_Type}}</div>
+		<div class="tag cartype">{{car?.Car_Type}}</div>
+	</div>
+	<div class="details">
+		<p class="name">{{car?.Name}}</p>
+		<div class="location">
+			<mat-icon>location_on</mat-icon>
+			<small>{{car?.Location}}</small>
+		</div>
+		<div class="location">
+			<mat-icon>airline_seat_recline_extra</mat-icon>
+			<small>{{car?.Seats}} seats</small>
+		</div>
+	</div>
+	<button mat-raised-button color="primary" [disabled]="disabled" (click)="selected = !selected; onSelect.emit(car)">{{(disabled)?'NOT AVAILABLE':(selected)?'Unselect':'Select'}}</button>
+</div>

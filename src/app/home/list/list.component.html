@@ -1,0 +1,26 @@
+<app-filter [filter]="filters" (onfilter)="onfilter($event)"></app-filter>
+<div class="container">
+	<div class="sortBy">
+		<mat-form-field [floatLabel]="'never'">
+		  <mat-select placeholder="Sort by Price" (selectionChange)="onSort($event.value)" [(ngModel)]="sort">
+		    <mat-option [value]="'1'">
+		      Low to High
+		    </mat-option>
+		    <mat-option [value]="'-1'">
+		      High to Low
+		    </mat-option>
+		  </mat-select>
+		</mat-form-field>
+	</div>
+	<div *ngIf="displayCars.length; else notAvailable " class="cars">
+		<app-car *ngFor="let c of displayCars" [car]="c" (onSelect)=onCarSelected($event)></app-car>
+	</div>
+	<ng-template #notAvailable>
+		<div class="empty">
+			Search results empty
+		</div>
+		<div class="cars" >
+			<app-car *ngFor="let c of allCars" [car]="c" [disabled]="'true'" (onSelect)=onCarSelected($event)></app-car>
+		</div>
+	</ng-template>
+</div>

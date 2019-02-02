@@ -1,0 +1,39 @@
+:host {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	background: #E91D63;
+	padding: 0px 10px;
+}
+mat-form-field {
+	margin: 0px 10px;
+	@media only screen and (max-width: 419px) {
+		width: 100%;
+		margin: 0;
+	}
+}
+.label {
+	min-width: 180px;
+	margin: 0px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	vertical-align: middle;
+	mat-icon {
+		vertical-align: middle;
+		font-size: 32px;
+		width: 32px;
+		height: 32px;
+	}
+	small {
+		font-size: 24px;
+    	font-weight: 300;
+    	padding: 0 10px 0 0;
+	}
+
+	@media only screen and (max-width: 419px) {
+		width: 100%;
+		margin: 0;
+	}
+}
