@@ -1,8 +1,8 @@
 :host{
 	display: block;
 	margin: 10px 0px;
-	background: #393939;
-	border-radius: 10px;
+	box-shadow: 0 1px 3px #666;
+	overflow: hidden;
 }
 
 .car {
@@ -13,9 +13,10 @@
 		position: relative;
 		padding: 10px;
 		flex-basis: 44%;
-		max-width: 480px;
+		max-width: 360px;
 		img {
 			width: 100%;
+			min-height: 120px;
 		}
 		.tag {
 			position: absolute;
@@ -64,7 +65,7 @@
 		max-width: 200px;
 	}
 	&.selected {
-		background: #555;
+		background: #393939;
 	}
 	@media only screen and (max-width: 730px) {
 		display: block;
